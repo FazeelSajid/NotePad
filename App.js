@@ -1,5 +1,4 @@
-import { StatusBar } from "expo-status-bar";
-import { StyleSheet, Text, View } from "react-native";
+import { StyleSheet, Text, View, StatusBar } from "react-native";
 // import NotePad from "./App/Screens/NotePad";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import { NavigationContainer } from "@react-navigation/native";
@@ -15,9 +14,12 @@ let Stack = createNativeStackNavigator();
 let App = () => {
 
   return (
+    <>
+    <StatusBar barStyle={"light-content"}/>
     <NavigationContainer>
       <AppStack/>
     </NavigationContainer>
+    </>
   );
 };
 

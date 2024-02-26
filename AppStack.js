@@ -120,7 +120,8 @@ const AppStack = () => {
       return;
     }
     // GetData();
-    setNotes((prevValue) => [...prevValue, newtaske]);
+    console.log(response.data['name']);
+    setNotes((prevValue) => [...prevValue, {id: response.data.name, task : newtask}]);
     navigation.navigate("home");
     console.log(newtask);
   };
